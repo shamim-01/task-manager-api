@@ -1,6 +1,7 @@
 # 📌 Task Manager REST API
 
-A secure and scalable RESTful API built with Node.js, Express.js, MongoDB, and JWT authentication for managing users and tasks.
+A secure and scalable RESTful API built using Node.js, Express.js, MongoDB, and JWT authentication.  
+This project demonstrates backend development with authentication and full CRUD operations.
 
 ---
 
@@ -8,11 +9,11 @@ A secure and scalable RESTful API built with Node.js, Express.js, MongoDB, and J
 
 - User Registration & Login system
 - JWT-based Authentication
-- Protected Routes
+- Protected Routes (Middleware)
 - Full CRUD operations for Tasks
-- MongoDB database integration
-- MVC architecture
-- Proper error handling middleware
+- MongoDB database integration (Mongoose)
+- MVC Architecture
+- Error handling middleware
 - Tested using Postman
 
 ---
@@ -24,7 +25,125 @@ A secure and scalable RESTful API built with Node.js, Express.js, MongoDB, and J
 - MongoDB + Mongoose
 - JWT (Authentication)
 - bcryptjs
-- Postman (API Testing)
+- Postman
 
 ---
 
+## 📁 Project Structure
+
+task-manager-api/
+│
+├── config/
+├── controllers/
+├── middleware/
+├── models/
+├── routes/
+├── utils/
+│
+├── server.js
+├── .env
+├── package.json
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file:
+
+PORT=5000  
+MONGO_URI=your_mongodb_connection_string  
+JWT_SECRET=your_secret_key  
+
+---
+
+## ▶️ Run Project
+
+npm install  
+npm run dev  
+
+---
+
+## 📡 API Endpoints
+
+### Auth
+
+POST /api/auth/register  
+POST /api/auth/login  
+
+---
+
+### Tasks (Protected)
+
+Authorization: Bearer TOKEN  
+
+POST /api/tasks  
+GET /api/tasks  
+GET /api/tasks/:id  
+PUT /api/tasks/:id  
+DELETE /api/tasks/:id  
+
+---
+
+## 🔐 Flow
+
+1. Register user  
+2. Login user  
+3. Get token  
+4. Use token in headers  
+5. Access tasks API  
+
+---
+
+## 📦 Example Request
+
+POST /api/tasks  
+
+{
+  "title": "Learn Node.js",
+  "description": "Build REST API project"
+}
+
+---
+
+## 📤 Example Response
+
+{
+  "_id": "64abc123...",
+  "title": "Learn Node.js",
+  "description": "Build REST API project",
+  "status": "pending",
+  "user": "userId"
+}
+
+---
+
+## 🧪 Testing
+
+All APIs tested using Postman:
+- Register
+- Login
+- Create Task
+- Get Tasks
+- Update Task
+- Delete Task
+
+---
+
+## 📌 Future Improvements
+
+- Role-based authentication
+- Pagination
+- Refresh token
+- Frontend (React)
+- Deployment
+
+---
+
+## 👨‍💻 Author
+
+Shamim Alam  
+GitHub:https://github.com/shamim-01/task-manager-api/
+
+---
+
+## ⭐ If you like this project, give a star
