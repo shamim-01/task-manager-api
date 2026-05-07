@@ -34,18 +34,32 @@ This project demonstrates backend development with authentication and full CRUD 
 task-manager-api/
 │
 ├── config/
+│   └── db.js
+│
 ├── controllers/
+│   ├── authController.js
+│   └── taskController.js
+│
 ├── middleware/
+│   ├── authMiddleware.js
+│   └── errorMiddleware.js
+│
 ├── models/
+│   ├── User.js
+│   └── Task.js
+│
 ├── routes/
+│   ├── authRoutes.js
+│   └── taskRoutes.js
+│
 ├── utils/
+│   └── generateToken.js
 │
 ├── server.js
 ├── .env
 ├── package.json
 
 ---
-
 ## ⚙️ Environment Variables
 
 Create a `.env` file:
