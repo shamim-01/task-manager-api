@@ -31,6 +31,7 @@ This project demonstrates backend development with authentication and full CRUD 
 
 ## 📁 Project Structure
 
+```text
 task-manager-api/
 │
 ├── config/
@@ -55,9 +56,13 @@ task-manager-api/
 ├── utils/
 │   └── generateToken.js
 │
+├── postman/
+│   └── task_manager_api.json
+│
 ├── server.js
 ├── .env
 ├── package.json
+```
 
 ---
 ## ⚙️ Environment Variables
@@ -65,8 +70,8 @@ task-manager-api/
 Create a `.env` file:
 
 PORT=5000  
-MONGO_URI=your_mongodb_connection_string  
-JWT_SECRET=your_secret_key  
+MONGO_URI='mongodb+srv://admin:XaUr9jO8XFwqMgoC@task-manager-api.yibmrlw.mongodb.net/taskmanagerdb'
+JWT_SECRET=mysecretkey
 
 ---
 
